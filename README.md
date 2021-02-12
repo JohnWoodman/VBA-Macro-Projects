@@ -1,5 +1,5 @@
 # VBA-Macro-Projects
-This repository is a collection of my malicious VBA projects.
+This repository is a collection of my malicious VBA projects and their related blog posts. Feel free to give me a follow on Twitter if you find this useful [@JohnWoodman15](https://twitter.com/JohnWoodman15)
 
 | VBA Macro &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description | Blog Post |
 | --------- | ----------- |:---------:|
