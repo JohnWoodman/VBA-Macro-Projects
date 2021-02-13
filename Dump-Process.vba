@@ -1,3 +1,7 @@
+'Dumps user-level process using only Windows API calls, no Powershell, shellcode injection, or dropping exe's.
+'Author: John Woodman
+'Twitter: @JohnWoodman15
+
 Private Declare PtrSafe Function CreateFile Lib "Kernel32" _
  Alias "CreateFileA" (ByVal lpFileName As String, _
  ByVal dwDesiredAccess As Long, ByVal dwShareMode As Long, _
